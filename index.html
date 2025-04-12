@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gnuzzle Timer</title>
+    <link href='/style.css' rel='stylesheet'>
+    <!-- Include Matter.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <!-- Include canvas-confetti library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="img/gnuzzle.png" alt="Gnuzzle Logo" class="logo">
+            <h1>Gnuzzle Timer</h1>
+        </header>
+
+        <main class="timer-section">
+            <div id="timerDisplay" class="timer-display">60</div>
+            <div id="hourglassContainer" class="hourglass-container">
+                <!-- Canvas will be created here by Matter.js -->
+            </div>
+            <div class="controls">
+                <button id="startButton" class="button start-button">Start</button>
+                <button id="resetButton" class="button reset-button">Reset</button>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Inspired by Pickle Everything Games</p>
+        </footer>
+    </div>
+
+    <!-- Audio elements -->
+    <audio id="beepsAudio" src="audio/beeps.mp3" preload="auto"></audio>
+    <audio id="timerAudio" src="audio/timer.mp3" preload="auto" loop></audio>
+    <audio id="tenLeftAudio" src="audio/10-left.mp3" preload="auto"></audio>
+
+    <script defer type="text/javascript" src="/main.js"></script>
+</body>
+</html>
