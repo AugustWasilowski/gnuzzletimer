@@ -4,7 +4,7 @@
     "description": "Gnuzzle Timer static website",
     "main": "index.html",
     "scripts": {
-      "start": "echo \"No build step needed\" && exit 0"
+      "start": "npx serve -s public -l 8080 || npm install -g serve && serve -s public -l 8080"
     },
     "author": "",
     "license": "ISC"
