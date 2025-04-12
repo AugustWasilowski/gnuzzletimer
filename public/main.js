@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Sand Particle Logic ---
     const particleSize = 3;
-    const totalParticlesToSpawn = 1440;
+    const totalParticlesToSpawn = 1340;
     const spawnDurationSeconds = 45;
     const spawnRatePerSecond = totalParticlesToSpawn / spawnDurationSeconds;
     const spawnIntervalMs = 1000 / spawnRatePerSecond;
@@ -201,13 +201,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 clearInterval(particleInterval);
                 particleInterval = null;
             }
-
             if (timeLeft === 11) {
                 try {
                     timerAudio.pause();
                     timerAudio.currentTime = 0;
-                    tenLeftAudio.currentTime = 0;
-                    tenLeftAudio.play();
+                    const playPromise10Left = tenLeftAudio.play();
+                    const playPromise10Second = document.getElementById('tenSecondCountdownAudio').play();
+
+                    Promise.all([playPromise10Left, playPromise10Second]).catch(error => {
+                      console.error("Error playing audio:", error);
+                    });
+
                     beepsAudio.removeEventListener('ended', playTimerLoop);
                 } catch (e) { console.error("Error playing 10-left audio:", e); }
             }
