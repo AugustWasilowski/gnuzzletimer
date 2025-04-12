@@ -1,0 +1,12 @@
+{
+    "name": "gnuzzle-timer",
+    "version": "1.0.0",
+    "description": "Gnuzzle Timer static website",
+    "main": "index.html",
+    "scripts": {
+      "start": "echo \"No build step needed\" && exit 0"
+    },
+    "author": "",
+    "license": "ISC"
+  }
+  
