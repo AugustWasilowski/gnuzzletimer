@@ -1,12 +1,14 @@
 {
     "name": "gnuzzle-timer",
     "version": "1.0.0",
-    "description": "Gnuzzle Timer static website",
+    "description": "Gnuzzle Timer",
     "main": "index.html",
     "scripts": {
-      "start": "npx serve -s public -l 8080 || npm install -g serve && serve -s public -l 8080"
+      "start": "npx serve -s public -l ${PORT:-8080}"
+    },
+    "dependencies": {
+      "serve": "^14.2.0"
     },
     "author": "",
     "license": "ISC"
   }
-  
