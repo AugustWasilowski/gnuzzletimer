@@ -2,9 +2,5 @@
   "firebase_hosting": {
     "deploymentHostingUrl": "https://gnuzzle.web.app"
   },
-  "cloud_run_deploy": {
-    "region": "us-east5",
-    "sourceFlag": "--source .",
-    "allowUnauthenticatedInvocationsFlag": "--allow-unauthenticated"
-  }
+  "cloud_run_deploy": {}
 }
